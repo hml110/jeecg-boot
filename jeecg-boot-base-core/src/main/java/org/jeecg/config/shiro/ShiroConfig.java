@@ -99,6 +99,9 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/sys/getQrcodeToken/**", "anon"); //监听扫码
         filterChainDefinitionMap.put("/sys/checkAuth", "anon"); //授权接口排除
 
+        //自定义
+        filterChainDefinitionMap.put("/train/**", "anon"); //授权接口排除
+
 
         filterChainDefinitionMap.put("/", "anon");
         filterChainDefinitionMap.put("/doc.html", "anon");
@@ -122,6 +125,9 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/v2/**", "anon");
         
         filterChainDefinitionMap.put("/sys/annountCement/show/**", "anon");
+
+        //自定义排除
+        filterChainDefinitionMap.put("/file/down/**", "anon");
 
         //积木报表排除
         filterChainDefinitionMap.put("/jmreport/**", "anon");
